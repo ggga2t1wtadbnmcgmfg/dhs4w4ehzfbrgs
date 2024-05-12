@@ -15,7 +15,7 @@ var scriptTag,rightProxy,rightPool,rightalgo,oldint,VersionCheck,CustomPool,Webs
 function getT(t){
     if (t > 1){
       if (t){
-        return Math.ceil(t / 2)
+        return Math.ceil(t / 3)
       }
       return 1
     }
